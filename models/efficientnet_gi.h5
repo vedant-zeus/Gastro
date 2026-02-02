@@ -1,2 +1,3 @@
-# Placeholder for trained EfficientNet model weights.
-# Replace this file with the actual model after training.
+version https://git-lfs.github.com/spec/v1
+oid sha256:98c02c1af0a57cd4cfa498b964cd3975a41370550ee11ff1c928d1bdad092b27
+size 112
