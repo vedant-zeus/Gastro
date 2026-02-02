@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GastroVision Disease Detection</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>GastroVision Disease Detection</h1>
+      <form
+        id="upload-form"
+        action="/predict"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        <label for="image">Upload Endoscopy Image</label>
+        <input type="file" id="image" name="image" accept="image/*" required />
+        <button type="submit">Predict Disease</button>
+      </form>
+      {% if prediction %}
+      <div class="result">
+        {% set parts = prediction.split(':', 1) %} {% if parts|length > 1 %}
+        <span>Predicted Disease:</span>
+        <span class="disease">{{ parts[1].split('(')[0].strip() }}</span><br />
+        <span
+          >{{ '(' ~ parts[1].split('(')[1] if '(' in parts[1] else '' }}</span
+        >
+        {% else %}
+        <span class="disease">{{ prediction }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </body>
+</html>

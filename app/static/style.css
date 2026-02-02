@@ -1,0 +1,68 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 500px;
+    margin: 60px auto;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    padding: 32px 28px 24px 28px;
+}
+
+h1 {
+    text-align: center;
+    color: #2b3a55;
+    margin-bottom: 18px;
+}
+
+label {
+    font-weight: 500;
+    color: #2b3a55;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="file"] {
+    display: block;
+    margin-bottom: 18px;
+}
+
+button {
+    background: #2b3a55;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 0;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+button:hover {
+    background: #1a2233;
+}
+
+.result {
+    margin-top: 24px;
+    padding: 20px 18px;
+    background: rgba(46, 204, 113, 0.18); /* translucent green */
+    border-radius: 12px;
+    color: #14532d;
+    font-size: 1.18rem;
+    text-align: center;
+    border: 1.5px solid #27ae60;
+    box-shadow: 0 2px 12px rgba(39, 174, 96, 0.08);
+    font-weight: 500;
+}
+.result .disease {
+    font-weight: bold;
+    color: #14532d;
+    font-size: 1.25rem;
+    letter-spacing: 0.5px;
+}
